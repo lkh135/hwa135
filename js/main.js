@@ -70,13 +70,33 @@ $(document).ready(function(){
     $(".modal_content").attr("src",arr_img_url[0]+"_all."+arr_img_url[1]);
   });
 
+  //모달창 닫기
   $(".close").on("click",function(){
+    $(".modal2").css("display","none");
     scrollOn();
   })
 
   $(".modal").on("click",function(){
     scrollOn();
   })
+
+
+  //220903 배경식자 모달창
+  $(".img2").on("click",function(){
+    var c_img_url = $(this).attr('src')
+    var arr_img_url = c_img_url.split(".");
+
+    $("body").css("overflow","hidden");
+    $(".modal2").fadeIn();
+    $(".modal_content2").attr("src",arr_img_url[0]+"_all."+arr_img_url[1]);
+  })
+
+  $(".modal2").on("click",function(){
+    $(this).css("display","none");
+    console.log($(this));
+    scrollOn();
+  })
+
 
 })
 

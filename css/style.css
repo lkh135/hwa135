@@ -108,10 +108,10 @@ img {max-width:100%; display:block; }
 
 /*sec3*/
 .sec3 .content_area { display:flex; border:1px solid #e1e1e1; padding:30px 0; }
-.sec3 .content_area li { padding:100px 10px; width:calc(20% - 20px); border-right:1px solid #e1e1e1; }
+.sec3 .content_area li { padding:100px 10px; width:calc(25% - 20px); border-right:1px solid #e1e1e1; }
 .sec3 .content_area li:last-child { border:none; }
 .sec3 .content_area p { font-size:48px; font-family:'RixYeoljeongdo_Regular';  }
-.sec3 .content_area p span { color:#505050; font-family: 'GmarketSansMedium'; font-size:16px; }
+.sec3 .content_area p span { color:#505050; font-family: 'GmarketSansMedium'; font-size:13px; vertical-align: middle; }
 .sec3 .content_area h3 { margin:100px 0 10px 0; font-size: 20px; font-family: 'GmarketSansBold'; }
 .sec3 .content_area h4 { margin-top:10px; font-size: 14px; word-break: keep-all; color:#505050; }
 
@@ -133,15 +133,11 @@ img {max-width:100%; display:block; }
 .sec4 .swiper01 .swiper-slide img { max-width: none; width:100%; }
 
 /*모달창*/
-.sec4 .img{
-  width: auto;
-  cursor: pointer;
-  transition: 0.3s;
-}
+.sec4 .img, .sec4 .img2{ width: auto; cursor: pointer; transition: 0.3s; filter: brightness(1); }
 /* 이미지 클릭 시, 밝기 조절 */
-.sec4 .img:hover {opacity: 0.8;}
+.sec4 .img:hover, .sec4 .img2:hover{ filter: brightness(0.5); }
 
-.sec4 .modal {
+.sec4 .modal, .sec4 .modal2{
   display: none; /* 모달창 숨겨 놓기 */
   position: fixed; 
   z-index: 1000; /* 모달창을 제일 앞에 두기 */
@@ -151,15 +147,20 @@ img {max-width:100%; display:block; }
   cursor: pointer; /* 마우스 손가락모양 */
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 /* 모달창 이미지 */
-.sec4 .modal_content {
+.sec4 .modal_content, .sec4 .modal_content2{
   margin: auto;
   display: block;
-  width: 50%; height: auto;
-  max-width: 1000px;
+  width: 100%; height: auto;
+  max-width: 1200px;
+}
+
+.sec4 .modal_content {
   animation-name: zoom;
   animation-duration: 0.8s;
 }
+
 /* 모달창 애니메이션 추가 */
 @keyframes zoom {
   from {transform: scale(0)}
@@ -180,6 +181,9 @@ img {max-width:100%; display:block; }
   text-decoration: none;
   cursor: pointer;
 }
+
+/*220903*/
+.sec4 .modal_content2 { position:absolute; top:50%; left: 50%; transform: translate(-50%, -50%);}
 
 /*sec5*/
 .sec5 { padding:50px 0; text-align:center; color:#f3f3f3; }
@@ -256,7 +260,7 @@ footer ul li { margin:10px 0; }
   /*sec3*/
   .sec3 h2 { font-size:2.4rem; }
   .sec3 .content_area { flex-wrap:wrap; padding:0; border:none; }
-  .sec3 .content_area li { padding:2rem 1rem; width:calc(33% - 2.2rem); border:1px solid #e1e1e1; }
+  .sec3 .content_area li { padding:2rem 1rem; width:calc(50% - 3rem); border:1px solid #e1e1e1; }
   .sec3 .content_area li:last-child { border:1px solid #e1e1e1; }
   .sec3 .content_area p { font-size:3.2rem; }
   .sec3 .content_area p span { font-size:2rem; }
